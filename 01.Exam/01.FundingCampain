@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal countDays = decimal.Parse(Console.ReadLine());
+        decimal countWokers = decimal.Parse(Console.ReadLine());
+        decimal countTorta = decimal.Parse(Console.ReadLine());
+        decimal countGofreti = decimal.Parse(Console.ReadLine());
+        decimal countPalachinki = decimal.Parse(Console.ReadLine());
+
+        decimal torta = 45m;
+        decimal gofreti = 5.80m;
+        decimal palachinki = 3.20m;
+
+        decimal totalTorta = countTorta * torta;
+        decimal totalGofreti = countGofreti * gofreti;
+        decimal totalPalachinki = countPalachinki * palachinki;
+
+        decimal totalEtim = (totalTorta + totalGofreti + totalPalachinki) * countWokers;
+        decimal amountAllCampain = totalEtim * countDays;
+        decimal amount =amountAllCampain -  (amountAllCampain * 1 / 8m);
+        Console.WriteLine(amount);
+
+
+    }
+}
