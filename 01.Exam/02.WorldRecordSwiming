@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double recordinSeconds = double.Parse(Console.ReadLine());
+        double distansInMeters = double.Parse(Console.ReadLine());
+        double timeInSeconds = double.Parse(Console.ReadLine());
+
+        double swiming = distansInMeters * timeInSeconds;
+        double porcentMinus =Math.Floor (distansInMeters / 15) * 12.50;
+        double totlaTime = swiming + porcentMinus;
+
+        if (recordinSeconds <= totlaTime)
+        {
+            Console.WriteLine("No, he failed! He was {0:f2} seconds slower.", totlaTime - recordinSeconds);
+        }
+        else
+        {
+            Console.WriteLine("Yes, he succeeded! The new world record is {0:f2} seconds.", totlaTime);
+
+        }
+
+
+    }
+}
