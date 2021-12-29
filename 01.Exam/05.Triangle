@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        int wide = (4 * n) + 1;
+
+        Console.WriteLine("{0}",new string('#',wide));
+
+        int sharp =( n * 2)-1;
+        int spasec = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (i != (n / 2)+ 1)
+            {
+                Console.WriteLine("{0}{1}{2}{1}{0}", new string('.', i), new string('#', sharp), new string(' ', spasec));
+
+                spasec += 2;
+                sharp -= 2;
+            }
+            else
+            {
+                
+                Console.WriteLine("{0}{1}{2}(@){2}{1}{0}", new string('.', i), new string('#', sharp), new string(' ', (n/2)- 1));
+                spasec += 2;
+                sharp -= 2;
+            }
+           
+
+        }
+        int dushes = ((n * 2) - 1);
+        int poi = (n +1);
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("{0}{1}{0}", new string('.', poi), new string('#',dushes));
+            poi += 1;
+            dushes -= 2;
+        }
+    }
+}
