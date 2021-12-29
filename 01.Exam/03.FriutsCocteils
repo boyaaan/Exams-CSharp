@@ -1,0 +1,70 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string fruit = Console.ReadLine().ToLower();
+        string sizeOfCocteil = Console.ReadLine().ToLower();
+        decimal countDrings = decimal.Parse(Console.ReadLine());
+
+        decimal result = 0.0m;
+
+        if (sizeOfCocteil == "small")
+        {
+            if (fruit == "watermelon")
+            {
+                result = (2 * 56) * countDrings;
+            }
+            else if (fruit == "mango")
+            {
+                result = (2 * 36.66m) * countDrings;
+
+            }
+            else if (fruit == "pineapple")
+            {
+                result = (2 * 42.10m) * countDrings;
+
+            }
+            else if (fruit == "raspberry")
+            {
+                result = (2 * 20m) * countDrings;
+
+            }
+        }
+        else if (sizeOfCocteil == "big")
+        {
+            if (fruit == "watermelon")
+            {
+                result = (5 * 28.70m) * countDrings;
+            }
+            else if (fruit == "mango")
+            {
+                result = (5 * 19.60m) * countDrings;
+
+            }
+            else if (fruit == "pineapple")
+            {
+                result = (5 * 24.80m) * countDrings;
+
+            }
+            else if (fruit == "raspberry")
+            {
+                result = (5 * 15.20m) * countDrings;
+
+            }
+        }
+
+        if (result >= 400 && result <= 1000)
+        {
+            result = result - (result * 0.15m);
+        }
+        else if (result > 1000)
+        {
+            result = result - (result * 0.50m);
+        }
+
+        Console.WriteLine("{0:f2} lv.",result);
+
+    }
+}
