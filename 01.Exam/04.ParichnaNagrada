@@ -1,0 +1,29 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        decimal parts = decimal.Parse(Console.ReadLine());
+        decimal pariNagrada = decimal.Parse(Console.ReadLine());
+        int num = 0;
+
+        for (int i = 1; i <= parts; i++)
+        {
+            int sum = int.Parse(Console.ReadLine());
+
+            if (i % 2 == 0)
+            {
+                num += sum * 2;
+            }
+            else
+            {
+                num += sum;
+            }
+
+        }
+
+        decimal totalPoint = pariNagrada * num;
+
+        Console.WriteLine("The project prize was {0:f2} lv.",totalPoint);
+    }
+}
