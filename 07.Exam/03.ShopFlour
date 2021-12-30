@@ -24,8 +24,6 @@ class Program
             if (bayLaleta > 7 && season  == "spring")
             {
                 price = price - (price * 0.05m);
-
-                
             } 
         }
         else if (season == "autumn" || season == "winter")
@@ -38,13 +36,10 @@ class Program
             else if(weekendOrNot == "n")
             {
                 price = price;
-
             }
             if (bayRozi >= 10 && season == "winter")
             {
                 price = price - (price * 0.10m);
-
-
             }
         }
 
@@ -52,9 +47,7 @@ class Program
         {
             price = price - (price * 0.20m);
         }
-
-       
-
+        
         Console.WriteLine("{0:f2}",(price + 2));
     }
 }
