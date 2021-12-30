@@ -1,0 +1,45 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int m = int.Parse(Console.ReadLine());
+        int o = int.Parse(Console.ReadLine());
+        int combination = 1;
+
+        for (int i = n; i <= m; i++)
+        {
+            for (int j = n; j <= m; j++)
+            {
+
+
+                if (o != (i + j))
+                {
+                    if (i == m && i == j)
+                    {
+                        Console.WriteLine("{0} combinations - neither equals {1}", combination, o);
+
+
+                        return;
+                    }
+                }
+                else
+                {
+                    int majegNum = i + j;
+                    Console.WriteLine("Combination N:{0} ({1} + {2} = {3})", combination, i, j, majegNum);
+
+                    return;
+                }
+
+
+
+                combination++;
+
+            }
+
+
+        }
+    }
+}
