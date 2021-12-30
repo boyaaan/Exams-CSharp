@@ -1,0 +1,56 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal amountInLeva = decimal.Parse(Console.ReadLine());
+        decimal meedleAcsec = decimal.Parse(Console.ReadLine());
+        decimal minimumSalary = decimal.Parse(Console.ReadLine());
+
+        decimal socialStependia = minimumSalary * 0.35m;
+        decimal result = 0.0m;
+
+        if (amountInLeva < minimumSalary )
+        {
+            if (meedleAcsec  > 4.50m && meedleAcsec <5.50m)
+            {
+                result = socialStependia;
+                Console.WriteLine("You get a Social scholarship {0} BGN", Math.Floor(result));
+            }
+            else if (meedleAcsec >= 5.50m)
+            {
+                result = meedleAcsec * 25;
+                Console.WriteLine("You get a scholarship for excellent results {0} BGN", Math.Floor(result));
+
+            }
+            else if (meedleAcsec < 4.50m)
+            {
+                Console.WriteLine("You cannot get a scholarship!");
+            }
+
+        }
+        else if (amountInLeva >= minimumSalary )
+        {
+            if (meedleAcsec > 4.50m && meedleAcsec < 5.50m)
+            {
+                Console.WriteLine("You cannot get a scholarship!");
+
+            }
+            else if (meedleAcsec >= 5.50m)
+            {
+                result = meedleAcsec * 25;
+                Console.WriteLine("You get a scholarship for excellent results {0} BGN", Math.Floor(result));
+            }
+            else if (meedleAcsec < 4.50m)
+            {
+                Console.WriteLine("You cannot get a scholarship!");
+            }
+
+
+        }
+        
+
+
+    }
+}
