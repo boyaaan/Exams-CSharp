@@ -10,7 +10,6 @@ class Program
         int pices = 0;
         int  result = 0;
 
-
         for (int i = 0; i < area; i++)
         {
             string stop = Console.ReadLine().ToLower();
@@ -28,16 +27,13 @@ class Program
         }
         if (area >= pices)
         {
-
             result = area - pices;
             Console.WriteLine("{0} pieces are left.", result);
-
         }
         else
         {
             result =pices - area;
             Console.WriteLine("No more cake left! You need {0} pieces more.", result);
         }
-
     }
 }
