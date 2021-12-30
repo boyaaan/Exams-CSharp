@@ -6,9 +6,7 @@ class Program
     {
         string season = Console.ReadLine().ToLower();
         decimal kilometerPerMonth = decimal.Parse(Console.ReadLine());
-
         decimal result = 0.0m;
-        
 
         if (kilometerPerMonth <= 5000)
         {
@@ -16,8 +14,6 @@ class Program
             {
                 result = kilometerPerMonth * 0.75m;
                 result = (result * 4);
-                
-
             }
             else if (season == "summer")
             {
@@ -41,7 +37,6 @@ class Program
             {
                 result = kilometerPerMonth * 1.10m;
                 result = (result * 4);
-
             }
             else if (season == "winter")
             {
@@ -56,7 +51,6 @@ class Program
         }
 
         result = result - (result * 0.10m);
-
         Console.WriteLine("{0:f2}",result);
     }
 }
