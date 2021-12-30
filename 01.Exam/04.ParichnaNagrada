@@ -19,7 +19,6 @@ class Program
             {
                 num += sum;
             }
-
         }
 
         decimal totalPoint = pariNagrada * num;
