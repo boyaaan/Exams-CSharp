@@ -12,12 +12,10 @@ class Program
         decimal pricetTitle = decimal.Parse(Console.ReadLine());
         decimal amountForWorker = decimal.Parse(Console.ReadLine());
 
-
         decimal areaFloor = wideFoor * lengthFloor;
         decimal areaTitle = (sideTriangle * hithTriangle) / 2;
         decimal needTitle = Math.Ceiling((areaFloor / areaTitle) + 5);
         decimal totalAmount = (needTitle * pricetTitle) + amountForWorker;
-
 
         if (totalAmount <= allMoney)
         {
@@ -26,7 +24,6 @@ class Program
         else
         {
             Console.WriteLine("You'll need {0:f2} lv more.", totalAmount - allMoney);
-
         }
     }
 }
