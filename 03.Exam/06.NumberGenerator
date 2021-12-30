@@ -42,16 +42,12 @@ class Program
                         return;
                     }
                 }
-
             }
-            
         }
-
 
         if (specialNuml < controlNum )
         {
             Console.WriteLine("No! {0} is the last reached special number.", specialNuml);
         }
-
     }
 }
