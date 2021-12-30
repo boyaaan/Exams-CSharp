@@ -18,19 +18,15 @@ class Program
             if (i != (n / 2)+ 1)
             {
                 Console.WriteLine("{0}{1}{2}{1}{0}", new string('.', i), new string('#', sharp), new string(' ', spasec));
-
                 spasec += 2;
                 sharp -= 2;
             }
             else
             {
-                
                 Console.WriteLine("{0}{1}{2}(@){2}{1}{0}", new string('.', i), new string('#', sharp), new string(' ', (n/2)- 1));
                 spasec += 2;
                 sharp -= 2;
             }
-           
-
         }
         int dushes = ((n * 2) - 1);
         int poi = (n +1);
