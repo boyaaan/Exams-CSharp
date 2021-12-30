@@ -1,0 +1,60 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal bayHrizantemi = decimal.Parse(Console.ReadLine());
+        decimal bayRozi = decimal.Parse(Console.ReadLine());
+        decimal bayLaleta = decimal.Parse(Console.ReadLine());
+        string season = Console.ReadLine().ToLower();
+        string weekendOrNot = Console.ReadLine().ToLower();
+
+        decimal price = 0.0m;
+        decimal allFlour = bayHrizantemi + bayLaleta + bayRozi;
+
+        if (season == "spring" || season == "summer")
+        {
+            price = (bayHrizantemi * 2.00m) + (bayRozi * 4.10m) + (bayLaleta * 2.50m);
+            if (weekendOrNot == "y")
+            {
+                price = price + (price * 0.15m);
+            }
+
+            if (bayLaleta > 7 && season  == "spring")
+            {
+                price = price - (price * 0.05m);
+
+                
+            } 
+        }
+        else if (season == "autumn" || season == "winter")
+        {
+            price = (bayHrizantemi * 3.75m) + (bayRozi * 4.50m) + (bayLaleta * 4.15m);
+            if (weekendOrNot == "y")
+            {
+                price = price + (price * 0.15m);
+            }
+            else if(weekendOrNot == "n")
+            {
+                price = price;
+
+            }
+            if (bayRozi >= 10 && season == "winter")
+            {
+                price = price - (price * 0.10m);
+
+
+            }
+        }
+
+        if (allFlour > 20)
+        {
+            price = price - (price * 0.20m);
+        }
+
+       
+
+        Console.WriteLine("{0:f2}",(price + 2));
+    }
+}
