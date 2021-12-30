@@ -1,0 +1,60 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double n = double.Parse(Console.ReadLine());
+
+        double topStudents = 0.0;
+        double sum1 = 0.0;
+        double sum2 = 0.0;
+        double fail = 0.0;
+        double average = 0.0;
+
+
+        for (double i = 0; i < n; i++)
+        {
+            double grades = double.Parse(Console.ReadLine());
+
+            if (grades >= 5.00)
+            {
+                topStudents++;
+                average += grades;
+            }
+            if (grades >= 4.00 && grades <= 4.99)
+            {
+                sum1++;
+                average += grades;
+
+            }
+            if (grades >= 3.00 && grades <= 3.99)
+            {
+                sum2++;
+                average += grades;
+
+            }
+            if (grades < 3.00)
+            {
+                fail++;
+                average += grades;
+
+            }
+
+
+        }
+
+        topStudents = (topStudents / n) * 100;
+        sum1 = (sum1 / n) * 100;
+        sum2 = (sum2 / n) * 100;
+        fail = (fail / n) * 100;
+        average = average / n;
+
+
+        Console.WriteLine("Top students: {0:f2}%", topStudents);
+        Console.WriteLine("Between 4.00 and 4.99: {0:f2}%", sum1);
+        Console.WriteLine("Between 3.00 and 3.99: {0:f2}%", sum2);
+        Console.WriteLine("Fail: {0:f2}%",fail);
+        Console.WriteLine("Average: {0:f2}", average);
+    }
+}
