@@ -18,7 +18,6 @@ class Program
             else
             {
                 followMuney -= (12000 + (50 * oldYears));
-
             }
             oldYears++;
         }
