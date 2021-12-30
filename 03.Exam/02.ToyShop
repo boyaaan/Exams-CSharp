@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal priceExcursion = decimal.Parse(Console.ReadLine());
+        decimal countPuzels = decimal.Parse(Console.ReadLine());
+        decimal countSpeekDoly = decimal.Parse(Console.ReadLine());
+        decimal countBears = decimal.Parse(Console.ReadLine());
+        decimal countMinoni = decimal.Parse(Console.ReadLine());
+        decimal countKamion = decimal.Parse(Console.ReadLine());
+
+        decimal puzels = 2.60m;
+        decimal speekDoly = 3m;
+        decimal bears = 4.10m;
+        decimal minion = 8.20m;
+        decimal kamion = 2m;
+        decimal totalPriceOff = 0.0m;
+
+        decimal totalPrice = (countPuzels * puzels) + (countSpeekDoly * speekDoly) + (countBears * bears) + (countMinoni * minion) + (countKamion * kamion);
+
+        decimal countToy = countBears + countKamion + countMinoni + countPuzels + countSpeekDoly;
+
+        if (countToy >= 50)
+        {
+            totalPriceOff = totalPrice * 0.25m;
+            totalPrice = totalPrice - totalPriceOff;
+        }
+
+        decimal rentTotalPrice = totalPrice - (totalPrice * 0.10m);
+
+        if (rentTotalPrice >= priceExcursion)
+        {
+            Console.WriteLine("Yes! {0:f2} lv left.", rentTotalPrice - priceExcursion);
+        }
+        else
+        {
+            Console.WriteLine("Not enough money! {0:f2} lv needed.",priceExcursion - rentTotalPrice);
+        }
+
+    }
+}
