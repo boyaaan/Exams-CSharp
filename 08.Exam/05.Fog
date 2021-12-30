@@ -10,15 +10,12 @@ class Program
         int stars = 1;
         int lines = wide - 4;
         int instars = n;
-        
 
         for (int i = 1; i <= n; i++)
         {
             Console.WriteLine(@"{0}\{1}/{0}",new string ('*',stars), new string('-',lines));
-
             stars++;
             lines -= 2;
-
         }
         lines = 0;
         stars = 0;
@@ -30,10 +27,8 @@ class Program
         for (int i = 0; i < n / 3; i++)
         {
             Console.WriteLine(@"|{0}\{1}/{0}|", new string('*',stars),new string('*',instars));
-
             stars++;
             instars -= 2;
-
         }
         
         lines = 0;
@@ -45,10 +40,8 @@ class Program
         for (int i = 0; i < n; i++)
         {
             Console.WriteLine(@"{0}\{1}/{0}", new string('-', stars), new string('*', lines));
-
             stars++;
             lines -= 2;
-
         }
     }
 }
