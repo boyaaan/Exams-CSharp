@@ -1,0 +1,45 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        int wide = (2 * n) + 1;
+        int lenth = (2 * n) + 3;
+        int inponts = n;
+        int outPoints = n - 1;
+        int stars = lenth;
+
+        Console.WriteLine("*{0}*{1}*", new string('.', inponts), new string('.', n));
+
+
+        for (int i = 1; i <= n - 2; i++)
+        {
+            Console.WriteLine("{0}*{1}*{1}*{0}", new string('.', i), new string('.', outPoints));
+            outPoints--;
+            if(i == n-2)
+            {
+                Console.WriteLine("{0}{1}{0}", new string('.', n-1), new string('*', 5));
+
+            }
+
+        }
+        Console.WriteLine("{0}", new string('*', stars));
+
+        
+
+        for (int i = n - 1; i >= 0 ; i--)
+        {
+            if (i == n - 1)
+            {
+                Console.WriteLine("{0}{1}{0}", new string('.', i), new string('*', 5));
+                continue;
+            }
+            Console.WriteLine("{0}*{1}*{1}*{0}", new string('.', i ), new string('.', outPoints + 1));
+            outPoints++;
+            
+        }
+    }
+}
