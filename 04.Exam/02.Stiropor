@@ -24,11 +24,8 @@ class Program
         }
         else
         {
-            
             result = needPakets - budjet;
             Console.WriteLine("Need more: {0:f2}", result);
-
         }
-
     }
 }
