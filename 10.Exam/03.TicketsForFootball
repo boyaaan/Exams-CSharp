@@ -8,8 +8,6 @@ class Program
         string category = Console.ReadLine().ToLower();
         int persons = int.Parse(Console.ReadLine());
 
-
-
         decimal vipTickets = persons * 499.99m;
         decimal normalTickets = persons * 249.99m;
         decimal procent = 0.0m;
