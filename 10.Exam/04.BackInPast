@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal followMuney = decimal.Parse(Console.ReadLine());
+        int years = int.Parse(Console.ReadLine());
+
+        int oldYears = 18;
+
+        for (int i = 1800; i <= years; i++)
+        {
+            if (i % 2 == 0)
+            {
+                followMuney -= 12000;
+            }
+            else
+            {
+                followMuney -= (12000 + (50 * oldYears));
+
+            }
+            oldYears++;
+        }
+
+        if (followMuney >= 0)
+        {
+            Console.WriteLine("Yes! He will live a carefree life and will have {0:f2} dollars left.",followMuney);
+        }
+        else
+        {
+            Console.WriteLine("He will need {0:f2} dollars to survive.",Math.Abs(followMuney));
+        }
+    }
+}
