@@ -1,0 +1,76 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        double result = 0.0;
+        double road1 = 0.0;
+        double road2 = 0.0;
+        double road3 = 0.0;
+        double road4 = 0.0;
+        double road5 = 0.0;
+        double unvalidNum = 0.0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int num = int.Parse(Console.ReadLine());
+            
+            if (num >= 0 && num <= 9)
+            {
+                result += (num * 0.20);
+                road1++;
+                
+            }
+            if (num >= 10 && num <= 19)
+            {
+                result += (num * 0.30);
+                road2++;
+
+            }
+            if (num >= 20 && num <= 29)
+            {
+                result += (num * 0.40);
+                road3++;
+
+            }
+            if (num >= 30 && num <= 39)
+            {
+                result += 50;
+                road4++;
+
+            }
+            if (num >= 40 && num <= 50)
+            {
+                result += 100;
+                road5++;
+
+            }
+            if (num < 0 )
+            {
+                result = result / 2;
+                unvalidNum++;
+
+            }
+            if (num > 50)
+            {
+                result = result / 2;
+                unvalidNum++;
+
+            }
+
+        }
+
+        Console.WriteLine("{0:f2}",result );
+        Console.WriteLine("From 0 to 9: {0:f2}%",((road1 * 100)/n));
+        Console.WriteLine("From 10 to 19: {0:f2}%",((road2 * 100)/n));
+        Console.WriteLine("From 20 to 29: {0:f2}%",((road3 * 100)/n));
+        Console.WriteLine("From 30 to 39: {0:f2}%",((road4 * 100)/n));
+        Console.WriteLine("From 40 to 50: {0:f2}%",((road5 * 100)/n));
+        Console.WriteLine("Invalid numbers: {0:f2}%", ((unvalidNum * 100)/n));
+
+
+    }
+}
