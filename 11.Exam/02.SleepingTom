@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int holydays = int.Parse(Console.ReadLine());
+        int workPlay = 63;
+        int holidaysPlay = 127;
+        int normalPlaysTom = 30000;
+
+        int playDays = 365 - holydays;
+        int workHolydaysplays = ((playDays * workPlay) + (holydays * holidaysPlay));
+        int allPlays =Math.Abs( normalPlaysTom - workHolydaysplays);
+
+        int hour = allPlays / 60;
+        int minute = allPlays % 60;
+
+        if (workHolydaysplays < normalPlaysTom)
+        {
+            Console.WriteLine("Tom sleeps well");
+            Console.WriteLine("{0} hours and {1} minutes less for play",hour ,minute);
+        }
+        else if (workHolydaysplays > normalPlaysTom)
+        {
+
+            Console.WriteLine("Tom will run away");
+            Console.WriteLine("{0} hours and {1} minutes more for play", hour, minute);
+        }
+    }
+}
