@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal countBitcoins = decimal.Parse(Console.ReadLine());
+        decimal countChiniseYan = decimal.Parse(Console.ReadLine());
+        decimal comission = decimal.Parse(Console.ReadLine());
+
+        decimal bitcoins = 1168;
+        decimal ChiniseYan = 0.15m;
+        decimal dolar = 1.76m;
+        decimal euro = 1.95m;
+
+        decimal totalYan = countChiniseYan * ChiniseYan;
+        decimal totalLev = totalYan * dolar;
+        decimal total = ((countBitcoins * bitcoins) + totalLev) / euro;
+        comission = total - ((total * comission)/ 100);
+
+        Console.WriteLine(comission);
+    }
+}
