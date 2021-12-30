@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        decimal w = decimal.Parse(Console.ReadLine());
+        decimal l = decimal.Parse(Console.ReadLine());
+        int m = int.Parse(Console.ReadLine());
+        int o = int.Parse(Console.ReadLine());
+
+        int allArea = n * n;
+        int bench = m * o;
+        decimal tileArea = w * l;
+        decimal area = allArea - bench;
+
+
+        decimal needTile = area / tileArea;
+        decimal needTime = needTile * 0.2m;
+
+        Console.WriteLine("{0:f2}",needTile);
+        Console.WriteLine("{0:f2}",needTime);
+
+    }
+}
