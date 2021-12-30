@@ -14,7 +14,6 @@ class Program
         double team = oldPeople + student;
         double result = 0;
         double pocentOff = 0;
-
         double nigthSleep = nigthForSleep * 82.99;
 
         if (transpot == "train")
@@ -31,17 +30,13 @@ class Program
                 resultOldPeople = oldPeople * 24.99;
                 resultStudent = student * 14.99;
                 result = (resultOldPeople + resultStudent)* 2;
-
             }
-
         }
         if (transpot == "bus")
         {
             resultOldPeople = oldPeople * 32.50;
             resultStudent = student * 28.50;
             result = (resultOldPeople + resultStudent) * 2;
-            
-
         }
         if (transpot == "boat")
         {
@@ -54,14 +49,10 @@ class Program
             resultOldPeople = oldPeople * 70.00;
             resultStudent = student * 50.00;
             result = (resultOldPeople + resultStudent) * 2;
-           
         }
 
-
         double total = (nigthSleep + result);
-
         result = total + (total * 0.10);
-
         Console.WriteLine("{0:f2}",result);
     }
 }
