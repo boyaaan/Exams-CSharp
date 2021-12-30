@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal allMoney = decimal.Parse(Console.ReadLine());
+        decimal wideFoor = decimal.Parse(Console.ReadLine());
+        decimal lengthFloor = decimal.Parse(Console.ReadLine());
+        decimal sideTriangle = decimal.Parse(Console.ReadLine());
+        decimal hithTriangle = decimal.Parse(Console.ReadLine());
+        decimal pricetTitle = decimal.Parse(Console.ReadLine());
+        decimal amountForWorker = decimal.Parse(Console.ReadLine());
+
+
+        decimal areaFloor = wideFoor * lengthFloor;
+        decimal areaTitle = (sideTriangle * hithTriangle) / 2;
+        decimal needTitle = Math.Ceiling((areaFloor / areaTitle) + 5);
+        decimal totalAmount = (needTitle * pricetTitle) + amountForWorker;
+
+
+        if (totalAmount <= allMoney)
+        {
+            Console.WriteLine("{0:f2} lv left.", allMoney - totalAmount);
+        }
+        else
+        {
+            Console.WriteLine("You'll need {0:f2} lv more.", totalAmount - allMoney);
+
+        }
+    }
+}
