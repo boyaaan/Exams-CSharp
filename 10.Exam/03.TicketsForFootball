@@ -1,0 +1,174 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal budjet = decimal.Parse(Console.ReadLine());
+        string category = Console.ReadLine().ToLower();
+        int persons = int.Parse(Console.ReadLine());
+
+
+
+        decimal vipTickets = persons * 499.99m;
+        decimal normalTickets = persons * 249.99m;
+        decimal procent = 0.0m;
+        decimal restMoney = 0.0m;
+
+        if (persons >= 1 && persons <= 4)
+        {
+            procent = budjet * 0.75m;
+            restMoney = budjet - procent;
+            if (category == "vip")
+            {
+                if (restMoney > vipTickets)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva.", restMoney);
+                }
+            }
+            if (category == "normal")
+            {
+                if (restMoney > normalTickets)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+        }
+        if (persons >= 5 && persons <= 9)
+        {
+            procent = budjet * 0.60m;
+            restMoney = budjet - procent;
+            if (category == "vip")
+            {
+                if (restMoney > vipTickets)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+            if (category == "normal")
+            {
+                if (restMoney > normalTickets)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+        }
+        if (persons >= 10 && persons <= 24)
+        {
+            procent = budjet * 0.50m;
+            restMoney = budjet - procent;
+            if (category == "vip")
+            {
+                if (restMoney > vipTickets)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+            if (category == "normal")
+            {
+                if (restMoney > normalTickets)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+        }
+        if (persons >= 25 && persons <= 49)
+        {
+            procent = budjet * 0.40m;
+            restMoney = budjet - procent;
+            if (category == "vip")
+            {
+                if (restMoney > vipTickets)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+            if (category == "normal")
+            {
+                if (restMoney > normalTickets)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+        }
+        if (persons >= 50)
+        {
+            procent = budjet * 0.25m;
+            restMoney = budjet - procent;
+            if (category == "vip")
+            {
+                if (restMoney > vipTickets)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - vipTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+            if (category == "normal")
+            {
+                if (restMoney > normalTickets)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Yes! You have {0:f2} leva left.", restMoney);
+                }
+                else if (restMoney < budjet)
+                {
+                    restMoney = Math.Abs(restMoney - normalTickets);
+                    Console.WriteLine("Not enough money! You need {0:f2} leva. ", restMoney);
+                }
+            }
+        }
+    }
+}
