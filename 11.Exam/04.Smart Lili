@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int age = int.Parse(Console.ReadLine());
+        decimal woshPrice = decimal.Parse(Console.ReadLine());
+        decimal toyPrice = decimal.Parse(Console.ReadLine());
+        int present = 0;
+        decimal selToyPrice = 0;
+        decimal diff = 0;
+                
+        for (int i = 1; i <= age; i++)
+        {
+            if (i % 2 == 0)
+            {
+                present += (i * 5) - 1;
+            }
+            else
+            {
+                selToyPrice += toyPrice;
+            }
+        }
+        decimal save = present + selToyPrice;
+
+        if (save > woshPrice)
+        {
+            diff = Math.Abs(save - woshPrice);
+            Console.WriteLine("Yes! {0:f2}", diff);
+        }
+        else
+        {
+            diff = Math.Abs(save - woshPrice);
+            Console.WriteLine("No! {0:f2}", diff);
+        }
+    }
+}
