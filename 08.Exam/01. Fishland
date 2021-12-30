@@ -21,7 +21,5 @@ class Program
         decimal bill = totalPricePalamud + totalPiceSafrid + priceMidi;
 
         Console.WriteLine("{0:f2}", bill);
-
-
     }
 }
