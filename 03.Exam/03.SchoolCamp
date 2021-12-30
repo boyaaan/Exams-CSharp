@@ -1,0 +1,217 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string season = Console.ReadLine().ToLower();
+        string kindOfTeem = Console.ReadLine().ToLower();
+        int countPupil = int.Parse(Console.ReadLine());
+        int countNigths = int.Parse(Console.ReadLine());
+
+        decimal price = 0.0m;
+
+        if (kindOfTeem == "girls" || kindOfTeem == "boys")
+        {
+            if (season == "winter")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 9.60m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 9.60m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 9.60m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil > 0)
+                {
+                    price = (countPupil * 9.60m) * countNigths;
+                    
+                }
+            }
+            else if (season == "spring")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 7.20m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 7.20m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 7.20m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil > 0)
+                {
+                    price = (countPupil * 7.20m) * countNigths;
+                    
+                }
+            }
+            else if (season == "summer")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 15m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 15m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 15m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil > 0)
+                {
+                    price = (countPupil * 15m) * countNigths;
+                    
+                }
+            }
+
+        }
+        if (kindOfTeem == "mixed")
+        {
+            if (season == "winter")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 10m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 10m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 10m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil > 0)
+                {
+                    price = (countPupil * 10m) * countNigths;
+                    
+                }
+            }
+            if (season == "spring")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 9.50m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 9.50m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 9.50m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil > 0)
+                {
+                    price = (countPupil * 9.50m) * countNigths;
+                    
+                }
+            }
+            if (season == "summer")
+            {
+                if (countPupil >= 50)
+                {
+                    price = (countPupil * 20m) * countNigths;
+                    price = price - (price * 0.50m);
+
+                }
+                else if (countPupil < 50 && countPupil >= 20)
+                {
+                    price = (countPupil * 20m) * countNigths;
+                    price = price - (price * 0.15m);
+                }
+                else if (countPupil < 20 && countPupil >= 10)
+                {
+                    price = (countPupil * 20m) * countNigths;
+                    price = price - (price * 0.05m);
+                }
+                else if (countPupil < 10 && countPupil >= 0)
+                {
+                    price = (countPupil * 20m) * countNigths;
+                   
+                }
+            }
+        }
+        if (kindOfTeem == "girls")
+        {
+            if (season == "winter")
+            {
+                Console.WriteLine("Gymnastics {0:f2} lv.", price);
+            }
+            else if (season == "spring")
+            {
+                Console.WriteLine("Athletics {0:f2} lv.", price);
+
+            }
+            else if (season == "summer")
+            {
+                Console.WriteLine("Volleyball {0:f2} lv.", price);
+
+            }
+        }
+        else if (kindOfTeem == "boys")
+        {
+            if (season == "winter")
+            {
+                Console.WriteLine("Judo {0:f2} lv.", price);
+            }
+            else if (season == "spring")
+            {
+                Console.WriteLine("Tennis {0:f2} lv.", price);
+
+            }
+            else if (season == "summer")
+            {
+                Console.WriteLine("Football {0:f2} lv.", price);
+
+            }
+        }
+        else if (kindOfTeem == "mixed")
+        {
+            if (season == "winter")
+            {
+                Console.WriteLine("Ski {0:f2} lv.", price);
+            }
+            else if (season == "spring")
+            {
+                Console.WriteLine("Cycling {0:f2} lv.", price);
+
+            }
+            else if (season == "summer")
+            {
+                Console.WriteLine("Swimming {0:f2} lv.", price);
+
+            }
+        }
+    }
+}
