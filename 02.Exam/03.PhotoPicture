@@ -1,0 +1,164 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int countPhoto = int.Parse(Console.ReadLine());
+        string photoSize = Console.ReadLine().ToLower();
+        string Order = Console.ReadLine().ToLower();
+
+        decimal price = 0;
+        decimal result = 0;
+
+        if (Order == "online")
+        {
+            if (photoSize == "9x13")
+            {
+                if (countPhoto <= 50)
+                {
+                    price = countPhoto * 0.16m;
+                    result = price - (price * 0.02m);
+
+                }
+                else if (countPhoto > 50 )
+                {
+                    price = countPhoto * 0.16m;
+                    price = price - (price * 0.05m);
+                    result = price - (price * 0.02m);
+                }
+               
+            }
+            else if (photoSize == "10x15")
+            {
+                if (countPhoto > 80)
+                {
+                    price = countPhoto * 0.16m;
+                    price = price - (price * 0.03m);
+                    result = price - (price * 0.02m);
+                }
+
+            }
+            else if (photoSize == "13x18")
+            {
+                if (countPhoto < 50)
+                {
+                    price = countPhoto * 0.38m;
+                    result = price - (price * 0.02m);
+                }
+                else if (countPhoto >= 50 && countPhoto <= 100)
+                {
+                    price = countPhoto * 0.38m;
+                    price = price - (price * 0.03m);
+                    result = price - (price * 0.02m);
+                }
+                else if (countPhoto > 100)
+                {
+                    price = countPhoto * 0.38m;
+                    price = price - (price * 0.05m);
+                    result = price - (price * 0.02m);
+                }
+            }
+            else if (photoSize == "20x30")
+            {
+                if (countPhoto < 10)
+                {
+                    price = countPhoto * 2.90m;
+                    result = price - (price * 0.02m);
+                }
+                else if (countPhoto >= 10 && countPhoto <= 50)
+                {
+                    price = countPhoto * 2.90m;
+                    price = price - (price * 0.07m);
+                    result = price - (price * 0.02m);
+                }
+                else if (countPhoto > 50)
+                {
+                    price = countPhoto * 2.90m;
+                    price = price - (price * 0.09m);
+                    result = price - (price * 0.02m);
+                }
+            }
+
+
+        }
+        else if (Order == "office")
+        {
+            if (photoSize == "9x13")
+            {
+                if (countPhoto < 50)
+                {
+                    price = countPhoto * 0.16m;
+                    result = price;
+
+                }
+                else if (countPhoto >= 50 && countPhoto < 80)
+                {
+                    price = countPhoto * 0.16m;
+                    result = price - (price * 0.05m);
+                }
+            }
+            else if (photoSize == "10x15")
+            {
+                if (countPhoto < 80)
+                {
+                    price = countPhoto * 0.16m;
+                    result = price;
+                }
+                else if (countPhoto >= 80)
+                {
+                    price = countPhoto * 0.16m;
+                    result = price - (price * 0.03m);
+
+                }
+
+            }
+            else if (photoSize == "13x18")
+            {
+                if (countPhoto < 50)
+                {
+                    price = countPhoto * 0.38m;
+                    result = price;
+                }
+                else if (countPhoto >= 50 && countPhoto <= 100)
+                {
+                    price = countPhoto * 0.38m;
+                    result = price - (price * 0.03m);
+
+                }
+                else if (countPhoto > 100)
+                {
+                    price = countPhoto * 0.38m;
+                    result = price - (price * 0.05m);
+
+                }
+            }
+            else if (photoSize == "20x30")
+            {
+                if (countPhoto < 10)
+                {
+                    price = countPhoto * 2.90m;
+                    result = price;
+                }
+                if (countPhoto >= 10 && countPhoto <= 50)
+                {
+                    price = countPhoto * 2.90m;
+                    result = price - (price * 0.07m);
+
+                }
+                else if (countPhoto > 50)
+                {
+                    price = countPhoto * 2.90m;
+                    result = price - (price * 0.09m);
+
+                }
+            }
+
+
+        }
+        Console.WriteLine("{0:f2}BGN",result);
+        
+
+
+    }
+}
