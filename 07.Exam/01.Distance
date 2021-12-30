@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double speed = double.Parse(Console.ReadLine());
+        double firstSpeed = double.Parse(Console.ReadLine());
+        double secondSpeed = double.Parse(Console.ReadLine());
+        double thirdSpeed = double.Parse(Console.ReadLine());
+
+        double hour = firstSpeed / 60;
+        double hour1 = secondSpeed / 60;
+        double kilometers = speed * hour;
+        double firstSpeedAfterUpper = speed + (speed * 0.10);
+        double firstKilometers = firstSpeedAfterUpper * hour1;
+        double hour2 = thirdSpeed / 60;
+        double speedLower = firstSpeedAfterUpper - (firstSpeedAfterUpper * 0.05);
+        double secondKilometers = speedLower * hour2;
+        double totalKilometer = firstKilometers + secondKilometers + kilometers;
+
+        Console.WriteLine("{0:f2}",totalKilometer);
+
+
+
+    }
+}
