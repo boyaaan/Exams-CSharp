@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        int higth = (4 * n) + 4;
+        int wide = (3 * n) + 1;
+
+        int vulna = n - 2;
+        int points = ((wide - vulna) - 2);
+
+
+        Console.WriteLine("+{0}+{1}",new string('~',vulna),new string('.',points));
+
+        for (int i = 0; i < (n * 2)+ 1; i++)
+        {
+            Console.WriteLine(@"|{0}\{1}\{2}",new string('.',i), new string('~', vulna), new string('.', points - 1));
+            points -= 1;
+        }
+
+        for (int i = 0; i < (n * 2) + 1; i++)
+        {
+            Console.WriteLine(@"{2}\{0}|{1}|", new string('.', (wide - vulna)- 3), new string('~', vulna), new string('.', i));
+            wide--;
+        }
+
+        Console.WriteLine("{1}+{0}+", new string('~', vulna), new string('.',( n * 2)+1));
+
+    }
+}
