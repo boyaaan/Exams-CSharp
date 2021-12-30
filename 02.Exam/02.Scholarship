@@ -22,20 +22,17 @@ class Program
             {
                 result = meedleAcsec * 25;
                 Console.WriteLine("You get a scholarship for excellent results {0} BGN", Math.Floor(result));
-
             }
             else if (meedleAcsec < 4.50m)
             {
                 Console.WriteLine("You cannot get a scholarship!");
             }
-
         }
         else if (amountInLeva >= minimumSalary )
         {
             if (meedleAcsec > 4.50m && meedleAcsec < 5.50m)
             {
                 Console.WriteLine("You cannot get a scholarship!");
-
             }
             else if (meedleAcsec >= 5.50m)
             {
@@ -46,11 +43,6 @@ class Program
             {
                 Console.WriteLine("You cannot get a scholarship!");
             }
-
-
         }
-        
-
-
     }
 }
