@@ -19,10 +19,7 @@ class Program
             electricity += everyMohnt;
             other1 = (everyMohnt + 20 + 15);
             other += other1 + ( other1 * 0.20m);
-            
-
         }
-
         
         water = mohnts * 20;
         internet = mohnts * 15;
