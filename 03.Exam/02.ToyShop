@@ -38,6 +38,5 @@ class Program
         {
             Console.WriteLine("Not enough money! {0:f2} lv needed.",priceExcursion - rentTotalPrice);
         }
-
     }
 }
