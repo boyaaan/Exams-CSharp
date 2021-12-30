@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int squareMetersFild = int.Parse(Console.ReadLine());
+        double grapeForOneSquare = double.Parse(Console.ReadLine());
+        int needLitersWine = int.Parse(Console.ReadLine());
+        int countWorker = int.Parse(Console.ReadLine());
+
+
+        double allGrapes = squareMetersFild * grapeForOneSquare;
+        double saveWine = (allGrapes * 0.40)/ 2.5;
+        double restLitres = Math.Abs(needLitersWine - saveWine);
+        double winePerPerson = Math.Abs(restLitres / countWorker);
+
+        if (saveWine > needLitersWine)
+        {
+            Console.WriteLine("Good harvest this year! Total wine: {0} liters.",Math.Floor(saveWine));
+            Console.WriteLine("{0} liters left -> {1} liters per person.", Math.Ceiling(restLitres),Math.Ceiling(winePerPerson));
+        }
+        else
+        {
+            Console.WriteLine("It will be a tough winter! More {0} liters wine needed.",Math.Floor(restLitres));
+        }
+    }
+}
