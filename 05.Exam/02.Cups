@@ -9,7 +9,6 @@ class Program
         int worksDays = int.Parse(Console.ReadLine());
 
         int hours = (wokers * worksDays) * 8;
-
         double cups = hours / 5;
 
         if (cups >= allCupsMake)
@@ -21,8 +20,6 @@ class Program
         {
             double cup = allCupsMake - cups;
             Console.WriteLine("Losses: {0:f2}", (cup * 4.2));
-
-
         }
     }
 }
