@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int points = n + 1;
+        int lines = (n * 2) + 1;
+        int width = (4 * n) + 3;
+        Console.WriteLine("{0}{1}{0}", new string('.', points), new string('_', lines));
+        
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine("{0}{1}{2}{3}{0}", new string('.', points - 1),
+                             ("//"), new string('_', lines  - 2), (@"\\"));
+
+            points--;
+            lines += 2;
+        }
+        points = 0;
+        lines = 0;
+
+        Console.WriteLine(@"//{0}STOP!{0}\\", new string('_',(width - 9) / 2));
+
+        for (int i = 0; i < n; i++)
+        {
+            if (i == 0)
+            {
+                Console.WriteLine(@"\\{0}//",
+                             new string('_', width - 4));
+            }
+            else
+            {
+                Console.WriteLine(@"{0}\\{1}//{0}", new string('.', points +1),
+                               new string('_', width - 6));
+                points++;
+                width -= 2;
+            }
+        }
+    }
+}
+        
