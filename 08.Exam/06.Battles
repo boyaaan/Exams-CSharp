@@ -22,10 +22,8 @@ class Program
                 {
                     Console.Write("({0} <-> {1}) ",i, j);
                 }
-
                 battleCount++;
             }
-
         }
         Console.WriteLine();
     }
