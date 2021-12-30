@@ -13,15 +13,11 @@ class Program
         {
             for (int j = n; j <= m; j++)
             {
-
-
                 if (o != (i + j))
                 {
                     if (i == m && i == j)
                     {
                         Console.WriteLine("{0} combinations - neither equals {1}", combination, o);
-
-
                         return;
                     }
                 }
@@ -29,17 +25,10 @@ class Program
                 {
                     int majegNum = i + j;
                     Console.WriteLine("Combination N:{0} ({1} + {2} = {3})", combination, i, j, majegNum);
-
                     return;
                 }
-
-
-
                 combination++;
-
             }
-
-
         }
     }
 }
