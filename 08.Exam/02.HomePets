@@ -1,0 +1,28 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int days = int.Parse(Console.ReadLine());
+        int foodLeftKilo = int.Parse(Console.ReadLine());
+        double oneDayFoodDogkilo = double.Parse(Console.ReadLine());
+        double oneDayFoodKatKilo = double.Parse(Console.ReadLine());
+        double oneDayFoodKostenurkaGrame = double.Parse(Console.ReadLine());
+
+        double totalFoodDog = days * oneDayFoodDogkilo;
+        double totalFoodKat = days * oneDayFoodKatKilo;
+        double totalFoodKostenurka = days * (oneDayFoodKostenurkaGrame  / 1000);
+
+        double totalFood = totalFoodDog + totalFoodKat + totalFoodKostenurka;
+    
+        if (foodLeftKilo >= totalFood)
+        {
+            Console.WriteLine("{0} kilos of food left.", Math.Floor(foodLeftKilo - totalFood));
+        }
+        else
+        {
+            Console.WriteLine("{0} more kilos of food are needed.", Math.Ceiling(totalFood - foodLeftKilo));
+
+        }
+    }
+}
