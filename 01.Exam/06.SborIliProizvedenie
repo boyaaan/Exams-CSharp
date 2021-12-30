@@ -14,29 +14,23 @@ class Program
             {
                 for (int k = 1; k <= 30; k++)
                 {
-                    
-                        if (i < j && j < k)
+                    if (i < j && j < k)
+                    {
+                        if (i + j + k == n)
                         {
-                            if (i + j + k == n)
-                            {
-                                Console.WriteLine("{0} + {1} + {2} = {3}", i, j, k, n);
-                                sum = true;
-                            }
-
+                            Console.WriteLine("{0} + {1} + {2} = {3}", i, j, k, n);
+                            sum = true;
                         }
+                    }
 
-                        if (i > j && j > k)
+                    if (i > j && j > k)
+                    {
+                        if (i * j * k == n)
                         {
-                            if (i * j * k == n)
-                            {
-                                Console.WriteLine("{0} * {1} * {2} = {3}", i, j, k, n);
-                                sum = true;
-                            }
-
+                            Console.WriteLine("{0} * {1} * {2} = {3}", i, j, k, n);
+                            sum = true;
                         }
-
-                    
-                   
+                    }
                 }
             }
         }
