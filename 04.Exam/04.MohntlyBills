@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int mohnts = int.Parse(Console.ReadLine());
+
+        decimal electricity = 0.0m;
+        decimal water = 0.0m;
+        decimal internet = 0.0m;
+        decimal other1 = 0.0m;
+        decimal other = 0.0m;
+
+        for (int i = 0; i < mohnts; i++)
+        {
+            decimal everyMohnt = decimal.Parse(Console.ReadLine());
+
+            electricity += everyMohnt;
+            other1 = (everyMohnt + 20 + 15);
+            other += other1 + ( other1 * 0.20m);
+            
+
+        }
+
+        
+        water = mohnts * 20;
+        internet = mohnts * 15;
+        decimal monhtly = (electricity + water + internet + other)/ mohnts;
+
+        Console.WriteLine("Electricity: {0:f2} lv", electricity);
+        Console.WriteLine("Water: {0:f2} lv", water);
+        Console.WriteLine("Internet: {0:f2} lv", internet);
+        Console.WriteLine("Other: {0:f2} lv", other);
+        Console.WriteLine("Average: {0:f2} lv", monhtly);
+    }
+}
