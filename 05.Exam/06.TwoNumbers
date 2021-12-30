@@ -7,20 +7,17 @@ class Program
         int start = int.Parse(Console.ReadLine());
         int end = int.Parse(Console.ReadLine());
         int magigNum = int.Parse(Console.ReadLine());
-
         int combination = 1;
 
         for (int i = start; i >= end; i--)
         {
             for (int j = start; j >= end; j--)
             {
-
                 if (magigNum != (i + j))
                 {
                     if (i == end && i == j)
                     {
                         Console.WriteLine("{0} combinations - neither equals {1}", combination, magigNum);
-
 
                         return;
                     }
@@ -34,10 +31,7 @@ class Program
                 }
 
                 combination++;
-
-
             }
-            
         }
     }
 }
