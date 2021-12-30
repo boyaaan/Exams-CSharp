@@ -1,0 +1,52 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal budjet = decimal.Parse(Console.ReadLine());
+        string season = Console.ReadLine().ToLower();
+
+        decimal result = 0.0m;
+
+        if (budjet <= 1000)
+        {
+            if (season == "summer")
+            {
+                result = budjet * 0.65m;
+                Console.WriteLine("Alaska - Camp - {0:f2}",result);
+            }
+            else if (season == "winter")
+            {
+                result = budjet * 0.45m;
+                Console.WriteLine("Morocco - Camp - {0:f2}", result);
+            }
+        }
+        else if (budjet > 1000 && budjet <= 3000)
+        {
+            if (season == "summer")
+            {
+                result = budjet * 0.80m;
+                Console.WriteLine("Alaska - Hut - {0:f2}", result);
+            }
+            else if (season == "winter")
+            {
+                result = budjet * 0.60m;
+                Console.WriteLine("Morocco - Hut - {0:f2}", result);
+            }
+        }
+        else if (budjet > 3000)
+        {
+            if (season == "summer")
+            {
+                result = budjet * 0.90m;
+                Console.WriteLine("Alaska - Hotel - {0:f2}", result);
+            }
+            else if (season == "winter")
+            {
+                result = budjet * 0.90m;
+                Console.WriteLine("Morocco - Hotel - {0:f2}", result);
+            }
+        }
+    }
+}
