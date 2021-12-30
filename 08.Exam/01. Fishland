@@ -1,0 +1,27 @@
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        decimal priceSkumria = decimal.Parse(Console.ReadLine());
+        decimal priceCaca = decimal.Parse(Console.ReadLine());
+        decimal kilogramPalamud = decimal.Parse(Console.ReadLine());
+        decimal kilogramSafrid = decimal.Parse(Console.ReadLine());
+        decimal kilogramMidi = decimal.Parse(Console.ReadLine());
+
+        decimal pricePalamud = priceSkumria +( priceSkumria * 0.60m);
+        decimal totalPricePalamud = kilogramPalamud * pricePalamud;
+        decimal priceSafrid = priceCaca +( priceCaca * 0.80m);
+        decimal totalPiceSafrid = kilogramSafrid * priceSafrid;
+        decimal priceMidi = kilogramMidi * 7.50m;
+
+        decimal bill = totalPricePalamud + totalPiceSafrid + priceMidi;
+
+        Console.WriteLine("{0:f2}", bill);
+
+
+    }
+}
