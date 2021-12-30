@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal budjet = decimal.Parse(Console.ReadLine());
+        decimal areaHouse = decimal.Parse(Console.ReadLine());
+        decimal countWindows = decimal.Parse(Console.ReadLine());
+        decimal stireoporOnePaket = decimal.Parse(Console.ReadLine());
+        decimal priceOnePaketStireopor = decimal.Parse(Console.ReadLine());
+
+        decimal areaHouse1 = areaHouse - (countWindows * 2.4m);
+        decimal tenPorcentMore = areaHouse1 + (areaHouse1 * 0.10m);
+        decimal needPakets = Math.Ceiling(tenPorcentMore / stireoporOnePaket) * priceOnePaketStireopor;
+
+        decimal result = 0.0m;
+
+        if (needPakets <= budjet)
+        {
+            Console.WriteLine("Spent: {0:f2}",needPakets);
+            result = budjet - needPakets;
+            Console.WriteLine("Left: {0:f2}", result);
+        }
+        else
+        {
+            
+            result = needPakets - budjet;
+            Console.WriteLine("Need more: {0:f2}", result);
+
+        }
+
+    }
+}
