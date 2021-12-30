@@ -19,7 +19,6 @@ class Program
                 {
                     price = countPhoto * 0.16m;
                     result = price - (price * 0.02m);
-
                 }
                 else if (countPhoto > 50 )
                 {
@@ -27,7 +26,6 @@ class Program
                     price = price - (price * 0.05m);
                     result = price - (price * 0.02m);
                 }
-               
             }
             else if (photoSize == "10x15")
             {
@@ -37,7 +35,6 @@ class Program
                     price = price - (price * 0.03m);
                     result = price - (price * 0.02m);
                 }
-
             }
             else if (photoSize == "13x18")
             {
@@ -79,8 +76,6 @@ class Program
                     result = price - (price * 0.02m);
                 }
             }
-
-
         }
         else if (Order == "office")
         {
@@ -90,7 +85,6 @@ class Program
                 {
                     price = countPhoto * 0.16m;
                     result = price;
-
                 }
                 else if (countPhoto >= 50 && countPhoto < 80)
                 {
@@ -109,9 +103,7 @@ class Program
                 {
                     price = countPhoto * 0.16m;
                     result = price - (price * 0.03m);
-
                 }
-
             }
             else if (photoSize == "13x18")
             {
@@ -124,13 +116,11 @@ class Program
                 {
                     price = countPhoto * 0.38m;
                     result = price - (price * 0.03m);
-
                 }
                 else if (countPhoto > 100)
                 {
                     price = countPhoto * 0.38m;
                     result = price - (price * 0.05m);
-
                 }
             }
             else if (photoSize == "20x30")
@@ -144,21 +134,14 @@ class Program
                 {
                     price = countPhoto * 2.90m;
                     result = price - (price * 0.07m);
-
                 }
                 else if (countPhoto > 50)
                 {
                     price = countPhoto * 2.90m;
                     result = price - (price * 0.09m);
-
                 }
             }
-
-
         }
         Console.WriteLine("{0:f2}BGN",result);
-        
-
-
     }
 }
