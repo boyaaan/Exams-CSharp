@@ -22,18 +22,16 @@ class Program
         Console.WriteLine("{0}", new string('*', wide));
         for (int i = 1; i <= (n *2)+ 1; i++)
         {
-
             Console.Write("{0}", new string('*', 1));
             if (i ==( n*2)+1)
             {
                 continue;
-
             }
+            
             Console.Write("{0}", new string('.', 1));
-
         }
+        
         Console.WriteLine();
         Console.WriteLine("{0}", new string('*', wide));
-
     }
 }
