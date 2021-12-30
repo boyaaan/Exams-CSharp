@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double higth = double.Parse(Console.ReadLine());
+        double wide = double.Parse(Console.ReadLine());
+        double higthTriangle = double.Parse(Console.ReadLine());
+
+        double twoSide = (higth * wide) * 2;
+        double windows = 1.5 * 1.5;
+        double totalTwoSide = twoSide -(2 * windows);
+        double bihindSide = (higth * higth) * 2;
+        double enter = 1.2 * 2;
+        double totalBihFrontSide = bihindSide - enter;
+
+        double greenPadouble = (totalBihFrontSide + totalTwoSide) / 3.4;
+
+        double twoTriangle = ((higth * higthTriangle) / 2) * 2;
+        double totalRoff = twoSide + twoTriangle;
+
+        double redPadouble = totalRoff / 4.3;
+
+        Console.WriteLine("{0:f2}",greenPadouble);
+        Console.WriteLine("{0:f2}",redPadouble);
+
+    }
+}
