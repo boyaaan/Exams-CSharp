@@ -14,7 +14,6 @@ class Program
 
         Console.WriteLine("*{0}*{1}*", new string('.', inponts), new string('.', n));
 
-
         for (int i = 1; i <= n - 2; i++)
         {
             Console.WriteLine("{0}*{1}*{1}*{0}", new string('.', i), new string('.', outPoints));
@@ -22,13 +21,9 @@ class Program
             if(i == n-2)
             {
                 Console.WriteLine("{0}{1}{0}", new string('.', n-1), new string('*', 5));
-
             }
-
         }
         Console.WriteLine("{0}", new string('*', stars));
-
-        
 
         for (int i = n - 1; i >= 0 ; i--)
         {
@@ -39,7 +34,6 @@ class Program
             }
             Console.WriteLine("{0}*{1}*{1}*{0}", new string('.', i ), new string('.', outPoints + 1));
             outPoints++;
-            
         }
     }
 }
