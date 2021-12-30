@@ -12,14 +12,11 @@ class Program
         int line = wide - (n/2);
         int secondOutline = n - 1;
 
-
-
         Console.WriteLine("{0}**{1}", new string('-', n * 3), new string('-', wide - outLines));
 
         for (int i = 0; i < n - 1; i++)
         {
             Console.WriteLine("{0}*{1}*{2}", new string('-', n * 3),new string('-',inLines), new string('-', ((wide - outLines)- 1)));
-
             inLines++;
             wide--;
         }
@@ -31,7 +28,6 @@ class Program
 
         for (int i = 0; i < (n / 2); i++)
         {
-
             if  (i != (n / 2)-1)
             {
                 Console.WriteLine("{0}*{1}*{2}", new string('-',outLines - 2), new string('-', inLines - 1), new string('-', secondOutline));
@@ -42,11 +38,7 @@ class Program
             else
             {
                 Console.WriteLine("{0}*{1}*{2}", new string('-', outLines - 2), new string('*', inLines - 1), new string('-', secondOutline));
-
-              
             }
-
         }
     }
-
 }
