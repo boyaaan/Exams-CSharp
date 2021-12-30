@@ -22,45 +22,37 @@ class Program
             {
                 result += (num * 0.20);
                 road1++;
-                
             }
             if (num >= 10 && num <= 19)
             {
                 result += (num * 0.30);
                 road2++;
-
             }
             if (num >= 20 && num <= 29)
             {
                 result += (num * 0.40);
                 road3++;
-
             }
             if (num >= 30 && num <= 39)
             {
                 result += 50;
                 road4++;
-
             }
             if (num >= 40 && num <= 50)
             {
                 result += 100;
                 road5++;
-
             }
             if (num < 0 )
             {
                 result = result / 2;
                 unvalidNum++;
-
             }
             if (num > 50)
             {
                 result = result / 2;
                 unvalidNum++;
-
             }
-
         }
 
         Console.WriteLine("{0:f2}",result );
@@ -70,7 +62,5 @@ class Program
         Console.WriteLine("From 30 to 39: {0:f2}%",((road4 * 100)/n));
         Console.WriteLine("From 40 to 50: {0:f2}%",((road5 * 100)/n));
         Console.WriteLine("Invalid numbers: {0:f2}%", ((unvalidNum * 100)/n));
-
-
     }
 }
