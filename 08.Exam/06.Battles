@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int pokemonPlayer1 = int.Parse(Console.ReadLine());
+        int pokemonPlayer2 = int.Parse(Console.ReadLine());
+        int maxBattles = int.Parse(Console.ReadLine());
+
+        int battleCount = 0;
+
+        for (int i = 1; i <= pokemonPlayer1; i++)
+        {
+            for (int j = 1; j <= pokemonPlayer2; j++)
+            {
+                if (battleCount == maxBattles)
+                {
+                    return;
+                }
+                else
+                {
+                    Console.Write("({0} <-> {1}) ",i, j);
+                }
+
+                battleCount++;
+            }
+
+        }
+        Console.WriteLine();
+    }
+}
