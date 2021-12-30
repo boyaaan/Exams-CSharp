@@ -9,13 +9,11 @@ class Program
         int lines = (n * 2) + 1;
         int width = (4 * n) + 3;
         Console.WriteLine("{0}{1}{0}", new string('.', points), new string('_', lines));
-        
 
         for (int i = 0; i < n; i++)
         {
             Console.WriteLine("{0}{1}{2}{3}{0}", new string('.', points - 1),
                              ("//"), new string('_', lines  - 2), (@"\\"));
-
             points--;
             lines += 2;
         }
