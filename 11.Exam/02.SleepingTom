@@ -23,7 +23,6 @@ class Program
         }
         else if (workHolydaysplays > normalPlaysTom)
         {
-
             Console.WriteLine("Tom will run away");
             Console.WriteLine("{0} hours and {1} minutes more for play", hour, minute);
         }
