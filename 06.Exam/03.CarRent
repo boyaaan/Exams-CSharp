@@ -1,0 +1,58 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal budjet = decimal.Parse(Console.ReadLine());
+        string season = Console.ReadLine().ToLower();
+
+        decimal cabrio = 0.0m;
+        decimal jeep = 0.0m;
+
+
+        if (budjet <= 100)
+        {
+            if (season == "summer")
+            {
+                Console.WriteLine("Economy class");
+                cabrio += budjet * 0.35m; 
+                Console.WriteLine("Cabrio - {0:f2}", cabrio);
+
+            }
+            else if (season == "winter")
+            {
+                Console.WriteLine("Economy class");
+                jeep =budjet * 0.65m;
+                Console.WriteLine("Jeep - {0:f2}", jeep);
+
+            }
+        }
+        else if (budjet > 100 && budjet <= 500)
+        {
+            if (season == "summer")
+            {
+
+                Console.WriteLine("Compact class");
+                cabrio += budjet * 0.45m;
+                Console.WriteLine("Cabrio - {0:f2}", cabrio);
+
+            }
+            else if (season == "winter")
+            {
+                Console.WriteLine("Compact class");
+                jeep =budjet * 0.80m;
+                Console.WriteLine("Jeep - {0:f2}", jeep);
+
+            }
+        }
+        else if (budjet > 500)
+        {
+            Console.WriteLine("Luxury class");
+            jeep =budjet * 0.90m;
+            Console.WriteLine("Jeep - {0:f2}", jeep);
+        }
+
+
+    }
+}
