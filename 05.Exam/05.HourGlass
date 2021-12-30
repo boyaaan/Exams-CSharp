@@ -1,0 +1,41 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        int wide = (2 * n)+ 1;
+        int spaces = wide;
+
+        Console.WriteLine("{0}", new string('*', wide));
+
+        Console.WriteLine(".*{0}*.",new  string(' ',spaces - 4));
+
+        int points = 2;
+        int klomba = wide - 6;
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            Console.WriteLine("{0}*{1}*{0}",new string('.',points),new string('@',klomba));
+
+            points++;
+            klomba -= 2; 
+
+        }
+
+        Console.WriteLine("{0}*{0}",new string('.', points));
+        klomba = 1;
+        for (int i = 0; i < n - 2; i++)
+        {
+            Console.WriteLine("{0}*{1}{2}{1}*{0}", new string('.', points -1),new string(' ',i) ,new string('@', klomba));
+            points--;
+        }
+
+        Console.WriteLine(".*{0}*.", new string('@', spaces - 4));
+
+        Console.WriteLine("{0}", new string('*', wide));
+
+    }
+}
