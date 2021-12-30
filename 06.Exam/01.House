@@ -20,6 +20,5 @@ class Program
 
         Console.WriteLine("{0:f2}",greenPaint);
         Console.WriteLine("{0:f2}",redPaint);
-
     }
 }
