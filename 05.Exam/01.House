@@ -16,14 +16,11 @@ class Program
         double totalBihFrontSide = bihindSide - enter;
 
         double greenPadouble = (totalBihFrontSide + totalTwoSide) / 3.4;
-
         double twoTriangle = ((higth * higthTriangle) / 2) * 2;
         double totalRoff = twoSide + twoTriangle;
-
         double redPadouble = totalRoff / 4.3;
 
         Console.WriteLine("{0:f2}",greenPadouble);
         Console.WriteLine("{0:f2}",redPadouble);
-
     }
 }
