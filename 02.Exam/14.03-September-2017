@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal countTables = decimal.Parse(Console.ReadLine());
+        decimal wideTables = decimal.Parse(Console.ReadLine());
+        decimal lenthTables = decimal.Parse(Console.ReadLine());
+
+        decimal totalArea = countTables * (wideTables + 2 * 0.30m) * (lenthTables + 2 * 0.30m);
+        decimal totalKareta = countTables *((wideTables / 2 ) * (wideTables / 2 ));
+        decimal priceDolars = (totalArea * 7) + (totalKareta * 9); 
+        decimal priceLeva = priceDolars * 1.85m;
+
+        Console.WriteLine("{0:f2} USD",priceDolars);
+        Console.WriteLine("{0:f2} BGN", priceLeva);
+
+
+
+    }
+}
