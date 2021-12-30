@@ -9,7 +9,6 @@ class Program
         int needLitersWine = int.Parse(Console.ReadLine());
         int countWorker = int.Parse(Console.ReadLine());
 
-
         double allGrapes = squareMetersFild * grapeForOneSquare;
         double saveWine = (allGrapes * 0.40)/ 2.5;
         double restLitres = Math.Abs(needLitersWine - saveWine);
