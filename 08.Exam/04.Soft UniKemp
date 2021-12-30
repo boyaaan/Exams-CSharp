@@ -21,29 +21,23 @@ class Program
             if (num <= 5)
             {
                 sum1 += num;
-
             }
             if (num >= 6 && num <= 12)
             {
                 sum2 += num;
-
             }
             if (num >= 13 && num <= 25)
             {
                 sum3 += num;
-
             }
             if (num >= 26 && num <= 40)
             {
                 sum4 += num;
-
             }
             if (num >= 41)
             {
                 sum5 += num;
-
             }
-
         }
 
         Console.WriteLine("{0:f2}%",Math.Abs((sum1 / sum)* 100));
