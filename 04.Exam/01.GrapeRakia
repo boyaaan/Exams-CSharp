@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double areaLoze = double.Parse(Console.ReadLine());
+        double kiloOneSquare = double.Parse(Console.ReadLine());
+        double brak = double.Parse(Console.ReadLine());
+
+        double allKilo = (areaLoze * kiloOneSquare) - brak;
+        double forRakia = allKilo * 0.45;
+        double literAndPrihod = (forRakia / 7.5) * 9.80;
+        double sell = allKilo * 0.55;
+        double sellPrihod = sell * 1.50;
+
+        Console.WriteLine("{0:f2}",literAndPrihod);
+        Console.WriteLine("{0:f2}", sellPrihod);
+
+    }
+}
