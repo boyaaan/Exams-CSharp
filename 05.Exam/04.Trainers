@@ -1,0 +1,56 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal lectoin = decimal.Parse(Console.ReadLine());
+        decimal budjet = decimal.Parse(Console.ReadLine());
+
+        decimal jelev = 0.0m;
+        decimal roYaL = 0.0m;
+        decimal roli = 0.0m;
+        decimal trofon = 0.0m;
+        decimal sino = 0.0m;
+        decimal guests = 0.0m;
+
+        for (int i = 0; i < lectoin; i++)
+        {
+            string nameLaction = Console.ReadLine().ToLower();
+
+            if (nameLaction == "jelev")
+            {
+                jelev++;
+            }
+            else if (nameLaction == "royal")
+            {
+                roYaL++;
+            }
+            else if (nameLaction == "roli")
+            {
+                roli++;
+            }
+            else if (nameLaction == "trofon")
+            {
+                trofon++;
+            }
+            else if (nameLaction == "sino")
+            {
+                sino++;
+            }
+            else
+            {
+                guests++;
+            }
+        }
+
+        decimal budjetSeparate = budjet / lectoin;
+
+        Console.WriteLine("Jelev salary: {0:f2} lv", (budjetSeparate * jelev));
+        Console.WriteLine("RoYaL salary: {0:f2} lv", (budjetSeparate * roYaL));
+        Console.WriteLine("Roli salary: {0:f2} lv", (budjetSeparate * roli));
+        Console.WriteLine("Trofon salary: {0:f2} lv", (budjetSeparate * trofon));
+        Console.WriteLine("Sino salary: {0:f2} lv", (budjetSeparate * sino));
+        Console.WriteLine("Others salary: {0:f2} lv", (budjetSeparate * guests));
+    }
+}
