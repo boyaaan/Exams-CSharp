@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        decimal wiskiLeva = decimal.Parse(Console.ReadLine());
+        decimal quantytyBeer = decimal.Parse(Console.ReadLine());
+        decimal quantytyWine = decimal.Parse(Console.ReadLine());
+        decimal quantytyRakia = decimal.Parse(Console.ReadLine());
+        decimal quantytyWiski = decimal.Parse(Console.ReadLine());
+
+        decimal priceRakia = wiskiLeva / 2;
+        decimal priceWine = priceRakia - (0.40m * priceRakia);
+        decimal priceBeer = priceRakia - (0.80m * priceRakia);
+
+        decimal totalPriceRakia = quantytyRakia * priceRakia;
+        decimal totalWine = quantytyWine * priceWine;
+        decimal totalPriceBeer = quantytyBeer * priceBeer;
+        decimal totalpriceWiski =quantytyWiski * wiskiLeva;
+
+        decimal allTotalPrice = totalPriceBeer + totalPriceRakia + totalpriceWiski + totalWine;
+
+        Console.WriteLine("{0:f2}",allTotalPrice);
+    }
+}
