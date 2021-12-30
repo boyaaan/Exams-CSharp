@@ -22,7 +22,5 @@ class Program
         decimal amountAllCampain = totalEtim * countDays;
         decimal amount =amountAllCampain -  (amountAllCampain * 1 / 8m);
         Console.WriteLine(amount);
-
-
     }
 }
