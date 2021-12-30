@@ -1,0 +1,56 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        
+        double sum1 = 0;
+        double sum2 = 0;
+        double sum3 = 0;
+        double sum4 = 0;
+        double sum5 = 0;
+        double sum = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            int num = int.Parse(Console.ReadLine());
+
+            sum += num;
+            if (num <= 5)
+            {
+                sum1 += num;
+
+            }
+            if (num >= 6 && num <= 12)
+            {
+                sum2 += num;
+
+            }
+            if (num >= 13 && num <= 25)
+            {
+                sum3 += num;
+
+            }
+            if (num >= 26 && num <= 40)
+            {
+                sum4 += num;
+
+            }
+            if (num >= 41)
+            {
+                sum5 += num;
+
+            }
+
+        }
+
+        Console.WriteLine("{0:f2}%",Math.Abs((sum1 / sum)* 100));
+        Console.WriteLine("{0:f2}%",Math.Abs((sum2 / sum)* 100));
+        Console.WriteLine("{0:f2}%",Math.Abs((sum3 / sum)* 100));
+        Console.WriteLine("{0:f2}%",Math.Abs((sum4 / sum)* 100));
+        Console.WriteLine("{0:f2}%",Math.Abs((sum5 / sum)* 100));
+
+    }
+}
