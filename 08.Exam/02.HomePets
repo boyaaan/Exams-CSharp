@@ -12,7 +12,6 @@ class Program
         double totalFoodDog = days * oneDayFoodDogkilo;
         double totalFoodKat = days * oneDayFoodKatKilo;
         double totalFoodKostenurka = days * (oneDayFoodKostenurkaGrame  / 1000);
-
         double totalFood = totalFoodDog + totalFoodKat + totalFoodKostenurka;
     
         if (foodLeftKilo >= totalFood)
@@ -22,7 +21,6 @@ class Program
         else
         {
             Console.WriteLine("{0} more kilos of food are needed.", Math.Ceiling(totalFood - foodLeftKilo));
-
         }
     }
 }
