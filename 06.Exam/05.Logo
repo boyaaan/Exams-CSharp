@@ -14,7 +14,6 @@ class Program
         for (int i = 0; i < n * 2; i++)
         {
             Console.WriteLine("{0}{1}{0}", new string('.', points / 2), new string('#', stars));
-
             stars += 6;
             points -= 6;
         }
@@ -30,14 +29,11 @@ class Program
             stars -= 6;
         }
 
-
         for (int i = 0; i < n - 1; i++)
         {
             Console.WriteLine("|{0}{1}{2}", new string('.', inpoints), new string('#', stars - 6), new string('.', points + 2));
-            
         }
 
         Console.WriteLine("@{0}{1}{2}", new string('.', inpoints), new string('#', stars - 6), new string('.', points + 2));
-
     }
 }
