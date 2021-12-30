@@ -1,0 +1,46 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double capaityStadion = double.Parse(Console.ReadLine());
+        double countFens = double.Parse(Console.ReadLine());
+
+        double sectorA = 0;
+        double sectorB = 0;
+        double sectorV = 0;
+        double sectorG = 0;
+
+
+        for (int i = 0; i < countFens; i++)
+        {
+            string sectors = Console.ReadLine().ToLower();
+
+            if (sectors == "a" )
+            {
+                sectorA++;
+            }
+            else if (sectors == "b")
+            {
+                sectorB++;
+            }
+            else if (sectors == "v")
+            {
+                sectorV++;
+            }
+            else if (sectors == "g")
+            {
+                sectorG++;
+            }
+
+        }
+
+        Console.WriteLine("{0:f2}%",(sectorA / countFens) * 100);
+        Console.WriteLine("{0:f2}%",(sectorB / countFens) * 100);
+        Console.WriteLine("{0:f2}%",(sectorV / countFens) * 100);
+        Console.WriteLine("{0:f2}%",(sectorG / countFens) * 100);
+        Console.WriteLine("{0:f2}%",(countFens / capaityStadion) * 100);
+
+    }
+}
