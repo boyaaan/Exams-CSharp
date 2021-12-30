@@ -12,7 +12,6 @@ class Program
         double sectorV = 0;
         double sectorG = 0;
 
-
         for (int i = 0; i < countFens; i++)
         {
             string sectors = Console.ReadLine().ToLower();
@@ -33,14 +32,12 @@ class Program
             {
                 sectorG++;
             }
-
         }
-
+        
         Console.WriteLine("{0:f2}%",(sectorA / countFens) * 100);
         Console.WriteLine("{0:f2}%",(sectorB / countFens) * 100);
         Console.WriteLine("{0:f2}%",(sectorV / countFens) * 100);
         Console.WriteLine("{0:f2}%",(sectorG / countFens) * 100);
         Console.WriteLine("{0:f2}%",(countFens / capaityStadion) * 100);
-
     }
 }
