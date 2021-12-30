@@ -1,0 +1,62 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string season = Console.ReadLine().ToLower();
+        decimal kilometerPerMonth = decimal.Parse(Console.ReadLine());
+
+        decimal result = 0.0m;
+        
+
+        if (kilometerPerMonth <= 5000)
+        {
+            if (season == "spring" || season == "autumn")
+            {
+                result = kilometerPerMonth * 0.75m;
+                result = (result * 4);
+                
+
+            }
+            else if (season == "summer")
+            {
+                result = kilometerPerMonth * 0.90m;
+                result = (result * 4);
+            }
+            else if (season == "winter")
+            {
+                result = kilometerPerMonth * 1.05m;
+                result = (result * 4);
+            }
+        }
+        else if (kilometerPerMonth > 5000 && kilometerPerMonth <= 10000)
+        {
+            if (season == "spring" || season == "autumn")
+            {
+                result = kilometerPerMonth * 0.95m;
+                result = (result * 4);
+            }
+            else if (season == "summer")
+            {
+                result = kilometerPerMonth * 1.10m;
+                result = (result * 4);
+
+            }
+            else if (season == "winter")
+            {
+                result = kilometerPerMonth * 1.25m;
+                result = (result * 4);
+            }
+        }
+        else if (kilometerPerMonth > 10000 && kilometerPerMonth <= 20000)
+        {
+            result = kilometerPerMonth * 1.45m;
+            result = (result * 4);
+        }
+
+        result = result - (result * 0.10m);
+
+        Console.WriteLine("{0:f2}",result);
+    }
+}
