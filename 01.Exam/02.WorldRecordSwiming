@@ -21,7 +21,5 @@ class Program
             Console.WriteLine("Yes, he succeeded! The new world record is {0:f2} seconds.", totlaTime);
 
         }
-
-
     }
 }
