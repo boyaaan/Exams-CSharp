@@ -24,23 +24,14 @@ class Program
                     Console.WriteLine("Score: {0} >= {1}", result, controlNum);
 
                     return;
-
                 }
                 moves++;
-
             }
-
-
         }
-
 
         if (result < controlNum)
         {
             Console.WriteLine("{0} moves", moves);
-
         }
-
-
-
     }
 }
