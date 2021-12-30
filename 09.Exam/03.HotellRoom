@@ -41,7 +41,6 @@ class Program
             }
             else
             {
-
                 resultStudio = 75.20m * countSleeping;
                 resultApartment = 68.70m * countSleeping;
             }
@@ -50,14 +49,11 @@ class Program
         {
             if (countSleeping <= 14m)
             {
-
                 resultStudio = 76m * countSleeping;
-
                 resultApartment = 77m * countSleeping;
             }
             else
             {
-
                 resultStudio = 76 * countSleeping;
                 apartment = (77m * 0.10m) - 77m;
                 resultApartment = apartment * countSleeping;
@@ -65,10 +61,5 @@ class Program
         }
         Console.WriteLine("Apartment: {0:f2} lv.", Math.Abs(resultApartment));
         Console.WriteLine("Studio: {0:f2} lv.", Math.Abs(resultStudio));
-
-
-
     }
-
-
 }
