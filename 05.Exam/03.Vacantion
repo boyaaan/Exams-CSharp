@@ -6,7 +6,6 @@ class Program
     {
         decimal budjet = decimal.Parse(Console.ReadLine());
         string season = Console.ReadLine().ToLower();
-
         decimal result = 0.0m;
 
         if (budjet <= 1000)
