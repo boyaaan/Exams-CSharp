@@ -14,13 +14,10 @@ class Program
         int bench = m * o;
         decimal tileArea = w * l;
         decimal area = allArea - bench;
-
-
         decimal needTile = area / tileArea;
         decimal needTime = needTile * 0.2m;
 
         Console.WriteLine("{0:f2}",needTile);
         Console.WriteLine("{0:f2}",needTime);
-
     }
 }
