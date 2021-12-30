@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int allCupsMake = int.Parse(Console.ReadLine());
+        int wokers = int.Parse(Console.ReadLine());
+        int worksDays = int.Parse(Console.ReadLine());
+
+        int hours = (wokers * worksDays) * 8;
+
+        double cups = hours / 5;
+
+        if (cups >= allCupsMake)
+        {
+            double cup = cups - allCupsMake;
+            Console.WriteLine("{0:f2} extra money", (cup * 4.2));
+        }
+        else
+        {
+            double cup = allCupsMake - cups;
+            Console.WriteLine("Losses: {0:f2}", (cup * 4.2));
+
+
+        }
+    }
+}
