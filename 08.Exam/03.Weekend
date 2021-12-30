@@ -1,0 +1,67 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int oldPeople = int.Parse(Console.ReadLine());
+        int student = int.Parse(Console.ReadLine());
+        int nigthForSleep = int.Parse(Console.ReadLine());
+        string transpot = Console.ReadLine().ToLower();
+
+        double resultOldPeople = 0;
+        double resultStudent = 0;
+        double team = oldPeople + student;
+        double result = 0;
+        double pocentOff = 0;
+
+        double nigthSleep = nigthForSleep * 82.99;
+
+        if (transpot == "train")
+        {
+            if (team > 50)
+            {
+                resultOldPeople = oldPeople * 24.99;
+                resultStudent = student * 14.99;
+                pocentOff = (resultOldPeople + resultStudent) * 2;
+                result = pocentOff - (pocentOff * 0.50);
+            }
+            else
+            {
+                resultOldPeople = oldPeople * 24.99;
+                resultStudent = student * 14.99;
+                result = (resultOldPeople + resultStudent)* 2;
+
+            }
+
+        }
+        if (transpot == "bus")
+        {
+            resultOldPeople = oldPeople * 32.50;
+            resultStudent = student * 28.50;
+            result = (resultOldPeople + resultStudent) * 2;
+            
+
+        }
+        if (transpot == "boat")
+        {
+            resultOldPeople = oldPeople * 42.99;
+            resultStudent = student * 39.99;
+            result = (resultOldPeople + resultStudent) * 2;
+        }
+        if (transpot == "airplane")
+        {
+            resultOldPeople = oldPeople * 70.00;
+            resultStudent = student * 50.00;
+            result = (resultOldPeople + resultStudent) * 2;
+           
+        }
+
+
+        double total = (nigthSleep + result);
+
+        result = total + (total * 0.10);
+
+        Console.WriteLine("{0:f2}",result);
+    }
+}
