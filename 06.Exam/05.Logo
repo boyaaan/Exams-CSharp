@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        int wide = (12 * n) - 5;
+        int higth = (4 * n) - 2;
+        int stars = 1;
+        int points = wide;
+
+        for (int i = 0; i < n * 2; i++)
+        {
+            Console.WriteLine("{0}{1}{0}", new string('.', points / 2), new string('#', stars));
+
+            stars += 6;
+            points -= 6;
+        }
+        points = 1;
+        stars = wide;
+        int inpoints = 2;
+
+        for (int i = 0; i < n - 2; i++)
+        {
+            Console.WriteLine("|{0}{1}{2}", new string('.', inpoints), new string('#', stars - 6), new string('.', points + 2));
+            inpoints += 3;
+            points += 3;
+            stars -= 6;
+        }
+
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            Console.WriteLine("|{0}{1}{2}", new string('.', inpoints), new string('#', stars - 6), new string('.', points + 2));
+            
+        }
+
+        Console.WriteLine("@{0}{1}{2}", new string('.', inpoints), new string('#', stars - 6), new string('.', points + 2));
+
+    }
+}
